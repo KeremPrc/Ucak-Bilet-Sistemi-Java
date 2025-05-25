@@ -1,10 +1,9 @@
-# Uçak Rezervasyon Sistemi (Java Console App)
+# Uçak Rezervasyon Sistemi 
 
 Bu uygulama, konsol tabanlı basit bir uçak rezervasyon sistemidir. Kullanıcılar, mevcut uçuşlar arasında seçim yaparak ad-soyad ve yaş bilgilerini girerek rezervasyon oluşturabilir. Rezervasyonlar `.json` ve `.csv` formatlarında kayıt edilir. Ek olarak rezervasyonları görüntüleme ve silme seçenekleri de mevcuttur.
 
----
 
-## 🔧 Özellikler
+## Özellikler
 
 - Uçak, lokasyon ve uçuş nesneleri tanımlanabilir.
 - Mevcut uçuşlar listelenir.
@@ -15,18 +14,16 @@ Bu uygulama, konsol tabanlı basit bir uçak rezervasyon sistemidir. Kullanıcı
 
 ---
 
-## 📂 Proje Yapısı
+## Proje Yapısı
 
-```
 UcakRezervasyonApp.java      → Tüm sınıflar ve uygulama giriş noktası
 gson-2.10.1.jar              → JSON desteği için gerekli kütüphane
 rezervasyonlar.json          → JSON formatında rezervasyon verisi
 rezervasyonlar.csv           → CSV formatında rezervasyon verisi
-```
 
----
 
-## 🚀 Nasıl Çalıştırılır?
+
+## Nasıl Çalıştırılır?
 
 ### 1. Gerekli Kurulumlar
 
@@ -40,11 +37,7 @@ javac -cp gson-2.10.1.jar UcakRezervasyonApp.java
 java -cp .;gson-2.10.1.jar UcakRezervasyonApp
 ```
 
-(Linux/macOS'ta `.;` yerine `.:` kullanmalısınız.)
-
----
-
-## 🧩 Kod Yapısı
+## Kod Yapısı
 
 ### 1. `BaseEntity`
 - Ortak özellikler: UUID (benzersiz kimlik) ve aktiflik bilgisi içerir.
@@ -78,7 +71,7 @@ java -cp .;gson-2.10.1.jar UcakRezervasyonApp
 
 ---
 
-## 🖥️ Uygulama Akışı
+## Uygulama Akışı
 
 1. Uygulama başlatılır.
 2. Uçuş listesi gösterilir.
@@ -90,9 +83,7 @@ java -cp .;gson-2.10.1.jar UcakRezervasyonApp
    - Kayıtlı rezervasyonlar görülebilir.
    - Rezervasyonlar silinebilir.
 
----
-
-## 📝 Kullanılan Komutlar Açıklaması
+## Kullanılan Komutlar Açıklaması
 
 - `javac -cp gson-2.10.1.jar UcakRezervasyonApp.java`: Java dosyasını Gson kütüphanesi ile birlikte derler.
 - `java -cp .;gson-2.10.1.jar UcakRezervasyonApp`: Derlenen uygulamayı çalıştırır.
@@ -100,9 +91,7 @@ java -cp .;gson-2.10.1.jar UcakRezervasyonApp
 - `UUID.randomUUID()`: Her nesneye eşsiz bir kimlik verir.
 - `Scanner`: Kullanıcıdan veri almak için kullanılır.
 
----
-
-## 🧹 Temizleme
+## Temizleme
 
 Testlerinizden sonra dosyaları sıfırlamak isterseniz:
 
@@ -111,16 +100,8 @@ del rezervasyonlar.json
 del rezervasyonlar.csv
 ```
 
----
-
-## 📌 Notlar
+## Notlar
 
 - Girişlerin geçerliliği kontrol altındadır. (Hatalı seçimlerde tekrar istenir.)
 - `gson-2.10.1.jar` dosyasının proje klasöründe olduğundan emin olun.
 - Dosya işlemlerinde `try-with-resources` kullanılmıştır, bu sayede dosyalar otomatik kapanır.
-
----
-
-## 🛡️ Lisans
-
-Bu proje tamamen eğitim amaçlı hazırlanmıştır. Herkes kullanabilir ve geliştirebilir.
